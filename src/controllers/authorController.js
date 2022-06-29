@@ -39,7 +39,7 @@ const authors= async function (req, res) {
     }
    let email = await authorModel.findOne({email:data.email})
     if (email) {  
-       return res.status(400).send({status: false,message: "email akready exists"});
+       return res.status(400).send({status: false,message: "email already exists"});
      }
  
      if(!data.password){

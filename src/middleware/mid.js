@@ -45,7 +45,7 @@ const authmid = async function (req, res, next) {
     console.log(findauthorId)
     console.log(checkAuthor)
     if (checkAuthor !== findauthorId)
-      return res.status(403).send({ status: false, msg: "User logged is not allowed to modifify" });  
+      return res.status(403).send({ status: false, msg: "User logged is not allowed to modify" });  
     next();
   } catch (err) {
     return res.status(500).send({ status: false, msg: err.message });
